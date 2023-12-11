@@ -1,6 +1,18 @@
 import Image from 'next/image'
+// import { GetUserRepo } from "./gitapi/GetUserRepo";
+import { GetUserRepo, GetUserPins } from './gitapi/queries';
 
-export default function Home() {
+
+export default async function Home() {
+  let x = await GetUserRepo("hugolz");
+
+
+  for (let index in x){
+    console.log(x[index].name);
+  }
+  
+
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
@@ -15,7 +27,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            By{' '}
+            By{' Hugo'}
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
