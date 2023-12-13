@@ -6,7 +6,6 @@ import * as types from "./types";
 
 export async function GetUserRepo(username: string): Promise<Array<types.MinimalRepository>> {
   const octokit = new rest.Octokit();
-  console.log("salut");
   // Compare: https://docs.github.com/en/rest/reference/repos/#list-organization-repositories
 
   let res = await octokit.rest.repos

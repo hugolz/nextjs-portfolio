@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { NextScript, Head } from 'next/document'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script defer src="/script/worms.js" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

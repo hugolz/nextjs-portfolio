@@ -2,26 +2,186 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+    --text: #e6f7dc;
+    --background: #333;
+    --background-secondary: #282828;
+    --background-accent: #1e8681;
+    --text-primary: #43EB63; /*#ade58b;*/
+    --text-secondary: #37a1d3;
+    --text-accent: #f9b234;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+/*    background-color: var(--background);*/
+    background-color: transparent;
+    width:  100%;
+    height: 100%;
+    margin: 0;
+    text-align: center ;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.topnav {
+  text-align: right;
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+}
+
+.project_list{
+    color: var(--text-primary);
+/*    border: 1px solid var(--primary);*/
+    border-radius: 10px;
+    padding: 1%;
+    margin-left: 25%;
+    width: 50%;
+    height: 100%;
+    margin-bottom: 19px;
+
+/*    position: absolute;
+    top: 50%;*/
+}
+
+.project{
+    border: 1px solid var(--background-accent);
+/*    background-color: var(--background-secondary);*/
+    border-radius: 10px;
+    margin: 0.8%;
+    margin-left: 10%;
+    margin-bottom: 2%;
+    width: 80%;
+    
+}
+
+.project:not(:last-child) {
+  margin-bottom: 0.8%;
+}
+
+a:visited{
+    color: var(--text-primary);
+    text-decoration: None;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: None;
+}
+
+.project .card-description{
+    margin-left: 1%;
+}
+
+.description{
+    --side-margin: 20%;
+    margin-top: 5%;
+    margin-left:  var(--side-margin);
+    margin-right: var(--side-margin) ; 
+    font-size: 2em;
+    color: var(--text);
+}
+
+
+
+
+/*
+    Totally not stolen from https://codepen.io/wikyware-net/pen/dyKPRxQ
+*/
+.card {
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.card-link {
+    display: block;
+/*    padding: 30px 20px;*/
+    padding: 3% 2%;
+    background-color: #282828;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.card-link:hover,
+.card-link:hover .card-date {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.card-link:hover .card-bg {
+    transform: translate(0vw, 60%) scale(3);
+    width: 100%; height: 100%;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.card-description{
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.card-date-box {
+    font-size: 18px;
+    color: var(--text-secondary);
+    z-index: 2;
+    position: relative;
+}
+
+
+.card-date {
+    font-weight: bold;
+    color: var(--text-accent);
+
+    transition: color .5s ease
+}
+
+.card-bg {
+    height: 128px;
+    width: 128px;
+    background-color: #f9b23430;
+
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+
+    border-radius: 50%;
+
+    transition: all .5s ease;
+}
+
+.card:nth-child(2n) .card-bg {
+    background-color: #3ecd5e30;
+}
+
+.card:nth-child(3n) .card-bg {
+    background-color: #e4400230;
+}
+
+.card:nth-child(4n) .card-bg {
+    background-color: #952aff30;
+}
+
+.card:nth-child(5n) .card-bg {
+    background-color: #cd3e9430;
+}
+
+.card:nth-child(6n) .card-bg {
+    background-color: #4c49ea30;
+}
+
+#gridwormCanvas{
+    background-color: black;
+    position: fixed;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
 }
