@@ -357,12 +357,12 @@ class Painter {
         this.points = this.createPoints(); //coordinates of the vertices of all squares when the canvas is partitioned
         this.gridWorms = this.createGridWorms();
         this.color = this.getRandomColor(0.1);
-        document.addEventListener('click', (event) => //when user clicks on the canvas
-            {
-                this.points = this.createPoints();
-                this.gridWorms = this.createGridWorms(); //spawn new gridworms
-                this.color = this.getRandomColor(0.1);
-            });
+        // document.addEventListener('click', (event) => //when user clicks on the canvas
+        //     {
+        //         this.points = this.createPoints();
+        //         this.gridWorms = this.createGridWorms(); //spawn new gridworms
+        //         this.color = this.getRandomColor(0.1);
+        //     });
     }
     createGridWorms() {
         let gridworms = [],

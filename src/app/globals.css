@@ -12,6 +12,10 @@
     --text-accent: #f9b234;
 }
 
+/**{
+    border: 1px solid red;
+}*/
+
 body{
 /*    background-color: var(--background);*/
     background-color: transparent;
@@ -31,7 +35,7 @@ body{
 }
 
 .project_list{
-    color: var(--text-primary);
+/*    color: var(--text-primary);*/
 /*    border: 1px solid var(--primary);*/
     border-radius: 10px;
     padding: 1%;
@@ -45,14 +49,7 @@ body{
 }
 
 .project{
-    border: 1px solid var(--background-accent);
-/*    background-color: var(--background-secondary);*/
-    border-radius: 10px;
-    margin: 0.8%;
-    margin-left: 10%;
-    margin-bottom: 2%;
-    width: 80%;
-    
+
 }
 
 .project:not(:last-child) {
@@ -74,12 +71,12 @@ a {
 }
 
 .description{
-    --side-margin: 20%;
-    margin-top: 5%;
-    margin-left:  var(--side-margin);
-    margin-right: var(--side-margin) ; 
-    font-size: 2em;
-    color: var(--text);
+/*    --side-margin: 20%;*/
+/*    margin-top: 5%;*/
+/*    margin-left:  var(--side-margin);*/
+/*    margin-right: var(--side-margin) ; */
+/*    font-size: 2em;*/
+/*    color: var(--text);*/
 }
 
 
@@ -89,23 +86,11 @@ a {
     Totally not stolen from https://codepen.io/wikyware-net/pen/dyKPRxQ
 */
 .card {
-    overflow: hidden;
-    border-radius: 28px;
-}
 
-.card-link {
-    display: block;
-/*    padding: 30px 20px;*/
-    padding: 3% 2%;
-    background-color: #282828;
-    overflow: hidden;
-    position: relative;
 }
-
 
 .card-link:hover,
-.card-link:hover .card-date {
-    text-decoration: none;
+.card-link:hover .card-title {
     color: #FFF;
 }
 
@@ -115,44 +100,22 @@ a {
 }
 
 .card-title {
-    font-weight: bold;
-    font-size: 30px;
-    color: var(--text-primary);
-    margin-bottom: 10px;
+
 }
 
 .card-description{
-    margin-bottom: 10px;
-    color: var(--text-secondary);
+
+}
+
+.card-date{
+
 }
 
 .card-date-box {
-    font-size: 18px;
-    color: var(--text-secondary);
-    z-index: 2;
-    position: relative;
-}
 
-
-.card-date {
-    font-weight: bold;
-    color: var(--text-accent);
-
-    transition: color .5s ease
 }
 
 .card-bg {
-    height: 128px;
-    width: 128px;
-    background-color: #f9b23430;
-
-    z-index: 1;
-    position: absolute;
-    top: -75px;
-    right: -75px;
-
-    border-radius: 50%;
-
     transition: all .5s ease;
 }
 
@@ -185,3 +148,8 @@ a {
     margin: 0px;
     padding: 0px;
 }
+
+/*.mail-input{
+    background-color: green;
+    size: 150px;
+}*/

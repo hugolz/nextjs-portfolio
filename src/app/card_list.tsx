@@ -28,7 +28,7 @@ export default async function CardList() {
     }
 
     return (
-        <div className="project_list">
+        <div className="text-[var(--text-primary)] p-[1%] sm:ml-[25%] sm:mr-[25%] ml-[5%] mr-[5%] sm:w-[50%] h-[100%]">
             {renders}
         </div>
     ); 
