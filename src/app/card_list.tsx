@@ -1,7 +1,7 @@
-import { MinimalRepository } from "./gitapi/types";
+import { MinimalRepository } from "./api/git/types";
 import Card from "./card";
-import { GetUserRepo, GetUserPins } from './gitapi/queries';
-import { sort, filter } from './gitapi/utils';
+import { GetUserRepo, GetUserPins } from './api/git/queries';
+import { sort, filter } from './api/git/utils';
 
 export default async function CardList() {
     let x = await GetUserRepo("hugolz");

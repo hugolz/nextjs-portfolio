@@ -29,7 +29,7 @@ const Contact: FC = () => {
         <input
           type='text'
           placeholder=' Full Name'
-          className='rounded-md border sm:w-[40%] sm:h-8 border-gray-300 bg-white text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
+          className='rounded-md border sm:w-[60%] sm:h-8 border-gray-300 bg-white text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
           {...register('name', { required: true })}
         />
       </div>
@@ -43,7 +43,7 @@ const Contact: FC = () => {
         <input
           type='email'
           placeholder=' example@domain.com'
-          className='rounded-md border sm:w-[40%] sm:h-8 border-gray-300 bg-white text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
+          className='rounded-md border sm:w-[60%] sm:h-8 border-gray-300 bg-white text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
           {...register('email', { required: true })}
         />
       </div>
@@ -57,12 +57,12 @@ const Contact: FC = () => {
         <textarea
           rows={4}
           placeholder=' Type your message'
-          className='resize-none rounded-md sm:w-[40%] border border-gray-300 bg-white text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
+          className='resize-none rounded-md sm:w-[60%] border border-gray-300 bg-white text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md'
           {...register('message', { required: true })}
         ></textarea>
       </div>
       <div>
-        <button className='hover:shadow-form sm:w-[15%] sm:h-13 rounded-md bg-purple-500  text-base font-semibold text-white outline-none'>
+        <button className='hover:shadow-form sm:w-[130px] sm:h-[40px] mb-20 rounded-md bg-purple-500  text-base font-semibold text-white outline-none'>
           Submit
         </button>
       </div>

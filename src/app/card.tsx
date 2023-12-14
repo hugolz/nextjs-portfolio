@@ -1,5 +1,5 @@
-import { MinimalRepository } from "./gitapi/types";
-import { get_last_update_time } from "./gitapi/utils";
+import { MinimalRepository } from "./api/git/types";
+import { get_last_update_time } from "./api/git/utils";
 import { capitalizeFirstLetter } from "./utils";
 import Image from "next/image";
 import Link from "next/link";
